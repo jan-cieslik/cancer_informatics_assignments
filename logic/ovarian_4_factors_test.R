@@ -1,3 +1,22 @@
+library(testthat)
+
+#Task 1
+test_that("OVC_1", {
+  expect_equal(sum(simulated_data$Time), 11066.6, tolerance=1e-3) 
+})
+
+#Task 2
+test_that("OVC_2", {
+  expect_equal(sum(test_head$Time), 126.4441, tolerance=1e-3) 
+})
+
+#Task 3
+test_that("OVC_3", {
+  expect_equal(colnames(simulated_data),
+               c("Treatment",  "RiskGroup",  "p53Status",  "BRCAStatus", "Status", "Time" )) 
+})
+
+
 #Logic Test for Exercise 1+2:
 
 

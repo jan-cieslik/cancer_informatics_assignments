@@ -2,7 +2,7 @@
 simulated_data <- read.csv("ovarian_4_factors.csv")
 
 # Task 2: Display the first five rows of the dataset
-head(simulated_data, 5)
+test_head <- head(simulated_data, 5)
 
 # Task 3: Check if the dataset has the expected columns
 column_names <- colnames(simulated_data)
