@@ -1,34 +1,24 @@
-#Exercise 1: Load and Display the Dataset
+# Task 1: Load the simulated ovarian cancer dataset
 
+# Task 2: Display the first five rows of the dataset
 
-#Objective: Verify that the simulated ovarian cancer dataset is loaded correctly, and the first few rows are displayed.
+# Task 3: Check if the dataset has the expected columns
 
+# Task 4: Load library(survival)
 
-#Tasks:
+# Task 5: Create a Kaplan-Meier survival curve and save the data as km_fit
 
-#Load the dataset from the file "ovarian_4_factors.csv" into a data frame named simulated_data.
+# Task 6: Extract the number of participans from the Kaplan-Meier curve
 
-#Display the first five rows of the dataset using the head function.
+# Task 7: Extract the p-value using the survdiff function, which performs a log-rank test for comparing survival curves between treatment groups and save the data as km_diff.
 
+# Task 8: Set the plotting parameters for the Kaplan-Meier plot. Define the x-axis label as "Time (Months)" and the y-axis label as "Survival Probability". 
+# Set the main title of the plot as "Kaplan-Meier Survival Curve". 
+# Limit the x-axis to the range [0, 36] months and the y-axis to the range [0, 1].
+# Set the colour for the treatment group to "blue" and for the no treatment group to "red"
 
-#Expected Output:
+# Task 9: Create a legend in the bottom-right corner of the plot. 
+# Label the treatment group as "Treatment" and the no treatment group as "No Treatment". 
+# Use the colors blue and red for the respective groups.
 
-#The dataset is loaded successfully.
-
-#The first five rows of the dataset are displayed.
-
-
-#Exercise 2: Verify Column Names
-
-
-#Objective: Ensure that the dataset has the expected column names.
-
-
-#Tasks:
-
-#Check if the dataset has the columns: "Treatment", "RiskGroup", "ERStatus", "HER2Status", "Status", and "Time".
-
-
-#Expected Output:
-
-#The dataset has the expected column names
+# Task 10: Cox Regression + Boxplot + HR's

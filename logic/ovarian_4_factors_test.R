@@ -16,37 +16,34 @@ test_that("OVC_3", {
                c("Treatment",  "RiskGroup",  "p53Status",  "BRCAStatus", "Status", "Time" )) 
 })
 
+#Task 4
+test_that("OVC_4", {
+  expect_equal(requireNamespace("survival"))
+})
 
-#Logic Test for Exercise 1+2:
+#Task 5
+test_that("OVC_5", {
+  expect_equal(inherits(km_fit, "survfit"))
+})
 
+# Task 6
+test_that("OVC_6", {
+  expect_equal(km_fit$n, 301, 299, tolerance=3)
+})
 
-# Attempt Exercise 1+2
-simulated_data <- read.csv("ovarian_4_factors.csv")
-head_of_data <- head(simulated_data, 5)
+# Task 7
+test_that("OVC_7", {
+  expect_equal(km_diff$pvalue, 0.04147609, tolerance=1e-3)
+})
 
-#Evaluate Exercise 1+2:
+# Task 8
+test_that("OVC_6", {
+  expect_equal(par("xlab"), "Time (Months)")
+  expect_equal(par("ylab"), "Survival Probability")
+  expect_equal(par("main"), "Kaplan-Meier Survival Curve")
+  expect_equal(attr(km_fit, "col"), c("red", "blue"))
+  expect_equal(attr(km_fit, "call")$xlim, c(0, 36))
+  expect_equal(attr(km_fit, "call")$ylim, c(0, 1))
+})
 
-
-# Expected Results for Exercise 1+2
-expected_head <- head(simulated_data, 5)
-
-# Logic Test for Exercise 1+2
-identical(head_of_data, expected_head)
-
-# Logic Test for Exercise 3:
-
-
-# Attempt Exercise 3
-simulated_data <- read.csv("ovarian_4_factors.csv")
-expected_columns <- c("Treatment", "RiskGroup", "ERStatus", "HER2Status", "Status", "Time")
-result <- all(expected_columns %in% colnames(simulated_data))
-
-
-# Evaluate Exercise 3:
-
-
-# Expected Results for Exercise 3
-expected_result <- TRUE
-
-# Logic Test for Exercise 3
-identical(result, expected_result)
+# Task 9
