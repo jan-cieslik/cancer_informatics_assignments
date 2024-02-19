@@ -18,17 +18,17 @@ test_that("OVC_3", {
 
 #Task 4
 test_that("OVC_4", {
-  expect_equal(requireNamespace("survival"))
+  expect_true("survival" %in% (.packages()))
 })
 
 #Task 5
 test_that("OVC_5", {
-  expect_equal(inherits(km_fit, "survfit"))
+  expect_true(inherits(km_fit, "survfit"))
 })
 
 # Task 6
 test_that("OVC_6", {
-  expect_equal(km_fit$n, 301, 299, tolerance=3)
+  expect_equal(num_participants, c(298, 302), tolerance=0)
 })
 
 # Task 7
@@ -37,7 +37,7 @@ test_that("OVC_7", {
 })
 
 # Task 8
-test_that("OVC_6", {
+test_that("OVC_8", {
   expect_equal(par("xlab"), "Time (Months)")
   expect_equal(par("ylab"), "Survival Probability")
   expect_equal(par("main"), "Kaplan-Meier Survival Curve")
