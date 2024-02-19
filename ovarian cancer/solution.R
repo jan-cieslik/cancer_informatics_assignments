@@ -12,11 +12,12 @@ print(column_names)
 column_names <- names(simulated_data)
 print(column_names)
 
-# Task 4: Load library(survival) 
+# Task 4: Load library survival and survminer
 library(survival) 
+library(survminer)
 
 # Task 5: Create a Kaplan-Meier survival curve and save the data as km_fit
-km_fit <- survminer::surv_fit(Surv(Time, Status) ~ Treatment, data = simulated_data)
+km_fit <- surv_fit(Surv(Time, Status) ~ Treatment, data = simulated_data)
 
 # Task 6: Extract the number of participans from the Kaplan-Meier curve
 num_participants <- km_fit$n
@@ -33,7 +34,7 @@ plot(km_fit, col = c("red", "blue"), lwd = 2, xlab = "Time (Months)", ylab = "Su
      main = "Kaplan-Meier Survival Curve", xlim = c(0, 36), ylim = c(0, 1),
      xaxs = "i", yaxs = "i", las = 1)
 
-library(survminer)
+
 
 p <- ggsurvplot(km_fit)
 
