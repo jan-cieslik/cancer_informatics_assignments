@@ -36,8 +36,8 @@ out <- run_simulation(samplesize=samplesize, blocksize=blocksize, factors=factor
                       N_simulation=N_simulation)
 
 # Extract the relevant columns from the simulated data
-data <- out$Data[,2:12]
-colnames(data) <- c("Treatment", "Lichen_ruber", "VIN", "MorbusPaget", "HPV16_18", "Smoking", "Obesity", "More_than_3_Sexual_Partners", "Lymphovascular_Invasion", "Perineural_Invasion", "HPV_Vaccination" )
+data <- out$Data[,2:14]
+colnames(data) <- c("Treatment", "Lichen_ruber", "VIN", "MorbusPaget", "HPV16_18", "Smoking", "Obesity", "More_than_3_Sexual_Partners", "Lymphovascular_Invasion", "Perineural_Invasion", "HPV_Vaccination", "Time", "Status")
 
 # Save the data to a CSV file
 write.csv(data, "vulvarcancer.csv", row.names = FALSE)
