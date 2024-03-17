@@ -9,7 +9,6 @@ library(ggsci)
 library(svglite)
 
 # Load the Ovarian Cancer Dataset:
-data <- read.table("http://localhost:3000/datasets/ovarian.csv", header=T, sep=",")
 data <- read.table("data/ovarian.csv", header=T, sep=",")
 
 # Explore the Dataset:
